@@ -8,12 +8,14 @@
     "unpkg": "dist/index.umd.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": "rollup -c",
-        "watch": "rollup -cw"
+        "build": "npm run clean && rollup -c",
+        "watch": "rollup -cw",
+        "clean": "rimraf dist"
     },
     "author": "",
     "license": "ISC",
-    "dependencies": {
+    "devDependencies": {
+        "rimraf": "^3.0.2",
         "rollup": "^2.60.0",
         "rollup-plugin-typescript2": "^0.30.0",
         "tslib": "^2.3.1",
