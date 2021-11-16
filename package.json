@@ -10,14 +10,23 @@
     "scripts": {
         "build": "npm run clean && rollup -c",
         "watch": "rollup -cw",
-        "clean": "rimraf dist"
+        "clean": "rimraf dist",
+        "test": "cross-env TS_NODE_PROJECT=\"tsconfig.testing.json\" mocha -r ts-node/register test/**/*.spec.ts"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@types/chai": "^4.2.22",
+        "@types/mocha": "^9.0.0",
+        "@types/sinon": "^10.0.6",
+        "chai": "^4.3.4",
+        "cross-env": "^7.0.3",
+        "mocha": "^9.1.3",
         "rimraf": "^3.0.2",
         "rollup": "^2.60.0",
         "rollup-plugin-typescript2": "^0.30.0",
+        "sinon": "^12.0.1",
+        "ts-node": "^10.4.0",
         "tslib": "^2.3.1",
         "typescript": "^4.4.4"
     }
