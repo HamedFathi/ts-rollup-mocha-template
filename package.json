@@ -13,11 +13,12 @@
         "build": "npm run clean && rollup -c",
         "lint-test-build": "npm run lint && npm run test && npm run build",
         "coverage": "rimraf coverage && nyc npm run test",
-        "typedoc": "typedoc --out docs src/index.ts",
+        "typedoc": "npm run clean-docs && typedoc --out docs src/index.ts",
         "watch": "rollup -cw",
         "clean": "rimraf dist coverage",
         "clean-dist": "rimraf dist",
-        "clean-coverage": "rimraf coverage"
+        "clean-coverage": "rimraf coverage",
+        "clean-docs": "rimraf docs"
     },
     "author": "",
     "license": "ISC",
