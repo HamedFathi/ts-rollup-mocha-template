@@ -3,7 +3,7 @@
     "module": "commonjs",
     "target": "es2015",
     "lib": [
-      "es2017"
+      "ESNext"
     ],
     "declaration": false,
     "noImplicitAny": false,

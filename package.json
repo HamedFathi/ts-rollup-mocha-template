@@ -9,8 +9,8 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "lint": "eslint src test --quiet --fix --ignore-path .gitignore",
-        "test": "cross-env TS_NODE_PROJECT=\"tsconfig.testing.json\" mocha -r ts-node/register test/**/*.spec.ts",
-        "build": "npm run clean && rollup -c",
+        "test": "cross-env TS_NODE_PROJECT=\"tsconfig.test.json\" mocha -r ts-node/register test/**/*.spec.ts",
+        "build": "npm run clean-dist && rollup -c",
         "lint-test-build": "npm run lint && npm run test && npm run build",
         "coverage": "rimraf coverage && nyc npm run test",
         "typedoc": "npm run clean-docs && typedoc --out docs src/index.ts",
@@ -57,8 +57,12 @@
         "exclude": [
             "**/*.d.ts",
             "dist",
+            "docs",
             "coverage",
-            "test/**/*.ts"
+            "test/**/*.ts",
+            "rollup.config.js",
+            ".eslintrc.js",
+            ".prettierrc.js"
         ],
         "reporter": [
             "html",

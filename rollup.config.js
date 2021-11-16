@@ -6,6 +6,7 @@ export default {
     output: [{
         format: "iife",
         file: './dist/index.iife.js',
+        name: 'yourModuleName',
         sourcemap: true
     },
     {
@@ -29,6 +30,7 @@ export default {
     {
         format: "iife",
         file: './dist/index.iife.min.js',
+        name: 'yourModuleName',
         sourcemap: true,
         plugins: [terser()]
     },
