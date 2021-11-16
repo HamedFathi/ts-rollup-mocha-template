@@ -6,7 +6,7 @@ This template is useful to create your node packages.
 It supports:
 
 * Rollup bundler (`commonjs`, `esm`, `iife`, `umd`)
-* TypeScript
+* TypeScript with `declaration`
 * ESLint
 * Prettier
 * Testing (`Mocha`, `Chai`, `Sinon`)
