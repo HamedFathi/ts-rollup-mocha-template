@@ -1,10 +1,12 @@
 import typescript from "rollup-plugin-typescript2";
+import { terser } from "rollup-plugin-terser";
 
 export default {
     input: "./src/index.ts",
     output: [{
         format: "iife",
-        file: "./dist/index.iife.js"
+        file: './dist/index.iife.js',
+        sourcemap: true
     },
     {
         file: './dist/index.js',
@@ -23,6 +25,33 @@ export default {
         format: 'umd',
         name: '--name-umd--',
         sourcemap: true
+    },
+    {
+        format: "iife",
+        file: './dist/index.iife.min.js',
+        sourcemap: true,
+        plugins: [terser()]
+    },
+    {
+        file: './dist/index.min.js',
+        format: 'cjs',
+        exports: 'named',
+        sourcemap: true,
+        plugins: [terser()]
+    },
+    {
+        file: './dist/index.es.min.mjs',
+        format: 'es',
+        exports: 'named',
+        sourcemap: true,
+        plugins: [terser()]
+    },
+    {
+        file: './dist/index.umd.min.js',
+        format: 'umd',
+        name: '--name-umd--',
+        sourcemap: true,
+        plugins: [terser()]
     }],
     plugins: [
         typescript({

@@ -8,13 +8,16 @@
     "unpkg": "dist/index.umd.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": "npm run clean && rollup -c",
-        "watch": "rollup -cw",
-        "clean": "rimraf dist",
+        "lint": "eslint src test --quiet --fix --ignore-path .gitignore",
         "test": "cross-env TS_NODE_PROJECT=\"tsconfig.testing.json\" mocha -r ts-node/register test/**/*.spec.ts",
+        "build": "npm run clean && rollup -c",
+        "lint-test-build": "npm run lint && npm run test && npm run build",
         "coverage": "rimraf coverage && nyc npm run test",
         "typedoc": "typedoc --out docs src/index.ts",
-        "lint": "eslint src test --quiet --fix --ignore-path .gitignore"
+        "watch": "rollup -cw",
+        "clean": "rimraf dist coverage",
+        "clean-dist": "rimraf dist",
+        "clean-coverage": "rimraf coverage"
     },
     "author": "",
     "license": "ISC",
@@ -36,6 +39,7 @@
         "prettier": "^2.4.1",
         "rimraf": "^3.0.2",
         "rollup": "^2.60.0",
+        "rollup-plugin-terser": "^7.0.2",
         "rollup-plugin-typescript2": "^0.30.0",
         "sinon": "^12.0.1",
         "source-map-support": "^0.5.20",
@@ -67,8 +71,9 @@
         }
     },
     "lint-staged": {
-        "*.{js,ts,tsx}": [
-            "npm run lint"
+        "{src,test}/**/*.{js,ts,tsx}": [
+            "npm run lint",
+            "git add"
         ]
     }
 }
