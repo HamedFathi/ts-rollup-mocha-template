@@ -5,7 +5,7 @@ This template is useful to create your next node package.
 
 It supports:
 
-- [x] Rollup bundler (`commonjs`, `esm`, `iife`, `umd`)
+- [x] Rollup bundler (`commonjs`, `esm`, `iife`, `umd`) with `source map`
 - [x] TypeScript with `declaration`
 - [x] ESLint
 - [x] Prettier
