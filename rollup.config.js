@@ -10,29 +10,17 @@ export default {
         sourcemap: true
     },
     {
-        file: './dist/index.js',
-        format: 'cjs',
-        exports: 'named',
-        sourcemap: true
-    },
-    {
-        file: './dist/index.es.mjs',
-        format: 'es',
-        exports: 'named',
-        sourcemap: true
-    },
-    {
-        file: './dist/index.umd.js',
-        format: 'umd',
-        name: '--name-umd--',
-        sourcemap: true
-    },
-    {
         format: "iife",
         file: './dist/index.iife.min.js',
         name: 'yourModuleName',
         sourcemap: true,
         plugins: [terser()]
+    },
+    {
+        file: './dist/index.js',
+        format: 'cjs',
+        exports: 'named',
+        sourcemap: true
     },
     {
         file: './dist/index.min.js',
@@ -42,11 +30,23 @@ export default {
         plugins: [terser()]
     },
     {
+        file: './dist/index.es.mjs',
+        format: 'es',
+        exports: 'named',
+        sourcemap: true
+    },
+    {
         file: './dist/index.es.min.mjs',
         format: 'es',
         exports: 'named',
         sourcemap: true,
         plugins: [terser()]
+    },
+    {
+        file: './dist/index.umd.js',
+        format: 'umd',
+        name: '--name-umd--',
+        sourcemap: true
     },
     {
         file: './dist/index.umd.min.js',
