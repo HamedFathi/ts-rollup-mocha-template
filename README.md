@@ -5,12 +5,12 @@ This template is useful to create your next node package.
 
 It supports:
 
-* Rollup bundler (`commonjs`, `esm`, `iife`, `umd`)
-* TypeScript with `declaration`
-* ESLint
-* Prettier
-* Testing (`Mocha`, `Chai`, `Sinon`)
-* Testing Coverage (`Istanbuljs/nyc`)
-* Documentation (`TypeDoc`)
-* Git (`Husky`, `lint-staged`)
-* Minification (`Terser`)
+- [x] Rollup bundler (`commonjs`, `esm`, `iife`, `umd`)
+- [x] TypeScript with `declaration`
+- [x] ESLint
+- [x] Prettier
+- [x] Testing (`Mocha`, `Chai`, `Sinon`)
+- [x] Testing Coverage (`Istanbuljs/nyc`)
+- [x] Documentation (`TypeDoc`)
+- [x] Git (`Husky`, `lint-staged`)
+- [x] Minification (`Terser`)
