@@ -14,3 +14,10 @@ It supports:
 - [x] Documentation (`TypeDoc`)
 - [x] Git (`Husky`, `lint-staged`)
 - [x] Minification (`Terser`)
+
+### Usage
+
+Don't forget:
+
+1. Change the `name` inside `package.json`. (`your-project-name` => `?`)
+2. Change two `iife` module `name` blocks inside `rollup.config.js`. (`yourModuleName` => `?`)
