@@ -2,16 +2,27 @@
     "name": "your-project-name",
     "version": "0.0.1",
     "description": "",
+    "keywords": [],
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "browser": "dist/index.umd.js",
     "unpkg": "dist/index.umd.js",
     "types": "dist/index.d.ts",
+    "typings": "dist/index.d.ts",
+    "homepage": "https://github.com/your-project",
+    "bugs": {
+        "url": "https://github.com/your-project/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/your-project"
+    },
     "scripts": {
         "lint": "eslint src test --quiet --fix --ignore-path .gitignore",
         "test": "cross-env TS_NODE_PROJECT=\"tsconfig.test.json\" mocha -r ts-node/register test/**/*.spec.ts",
         "build": "npm run clean-dist && rollup -c",
         "lint-test-build": "npm run lint && npm run test && npm run build",
+        "lint-test-build-docs": "npm run lint && npm run test && npm run build && npm run typedoc",
         "coverage": "rimraf coverage && nyc npm run test",
         "typedoc": "npm run clean-docs && typedoc --out docs src/index.ts",
         "watch": "rollup -cw",
@@ -43,7 +54,7 @@
         "rimraf": "^3.0.2",
         "rollup": "^2.60.0",
         "rollup-plugin-terser": "^7.0.2",
-        "rollup-plugin-typescript2": "^0.30.0",
+        "rollup-plugin-typescript2": "^0.31.0",
         "sinon": "^12.0.1",
         "source-map-support": "^0.5.20",
         "ts-node": "^10.4.0",

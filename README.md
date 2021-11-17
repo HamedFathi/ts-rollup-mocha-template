@@ -17,5 +17,6 @@ It supports:
 
 ### Usage
 
-1. Change the `name` inside `package.json`. (`your-project-name` => `?`)
-2. Change two `iife` module `name` blocks inside `rollup.config.js`. (`yourModuleName` => `?`)
+1. Update the `name` inside `package.json`. (`your-project-name` => `?`)
+2. Update two `iife` module `name` blocks inside `rollup.config.js`. (`yourModuleName` => `?`)
+3. Update `homepage`, `bugs` and `repository` URLs inside `package.json`.
