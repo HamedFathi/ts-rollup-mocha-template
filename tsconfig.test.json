@@ -3,7 +3,7 @@
     "module": "commonjs",
     "target": "ESNext",
     "lib": [
-      "ESNext"
+      "ESNext", "dom"
     ],
     "declaration": false,
     "noImplicitAny": false,
