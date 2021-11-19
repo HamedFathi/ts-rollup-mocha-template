@@ -1,5 +1,4 @@
-
-![rollup](https://user-images.githubusercontent.com/8418700/141651449-7a9fe540-d1a7-4828-bbf2-c97bc64af56d.jpg)
+![rm](https://user-images.githubusercontent.com/8418700/142704968-e37b9490-7653-4ac0-8dfe-995663ad1a79.jpg)
 
 This template is useful to create your next node package.
 
