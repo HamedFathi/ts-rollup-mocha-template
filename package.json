@@ -9,6 +9,10 @@
     "unpkg": "dist/index.umd.js",
     "types": "dist/index.d.ts",
     "typings": "dist/index.d.ts",
+    "engines": {
+        "node": ">=12",
+        "npm": ">=6"
+    },
     "homepage": "https://github.com/your-project",
     "bugs": {
         "url": "https://github.com/your-project/issues"
