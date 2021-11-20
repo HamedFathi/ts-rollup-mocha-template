@@ -4,7 +4,7 @@ This template is useful to create your next node package.
 
 It supports:
 
-- [x] Rollup bundler (`commonjs`, `esm`, `iife`, `umd`) with `sourcemap`
+- [x] Rollup bundler (`amd`, `commonjs`, `esm`, `iife`, `umd`) with `sourcemap`
 - [x] TypeScript with `declaration`
 - [x] ESLint
 - [x] Prettier
