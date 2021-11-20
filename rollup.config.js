@@ -6,13 +6,13 @@ export default {
     output: [{
         format: "iife",
         file: './dist/index.iife.js',
-        name: 'yourModuleName',
+        name: '--your--module--name--',
         sourcemap: true
     },
     {
         format: "iife",
         file: './dist/index.iife.min.js',
-        name: 'yourModuleName',
+        name: '--your--module--name--',
         sourcemap: true,
         plugins: [terser()]
     },
@@ -58,13 +58,13 @@ export default {
     {
         file: './dist/index.umd.js',
         format: 'umd',
-        name: '--name-umd--',
+        name: '--your--module--name--',
         sourcemap: true
     },
     {
         file: './dist/index.umd.min.js',
         format: 'umd',
-        name: '--name-umd--',
+        name: '--your--module--name--',
         sourcemap: true,
         plugins: [terser()]
     }],
