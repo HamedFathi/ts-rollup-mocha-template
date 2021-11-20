@@ -43,6 +43,19 @@ export default {
         plugins: [terser()]
     },
     {
+        file: './dist/index.amd.js',
+        format: 'amd',
+        exports: 'named',
+        sourcemap: true
+    },
+    {
+        file: './dist/index.amd.min.js',
+        format: 'amd',
+        exports: 'named',
+        sourcemap: true,
+        plugins: [terser()]
+    },             
+    {
         file: './dist/index.umd.js',
         format: 'umd',
         name: '--name-umd--',
