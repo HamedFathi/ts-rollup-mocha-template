@@ -29,6 +29,7 @@
         "all-docs": "npm run lint && npm run test && npm run build && npm run typedoc",
         "coverage": "rimraf coverage && nyc npm run test",
         "typedoc": "npm run clean-docs && typedoc --out docs src/index.ts",
+        "release": "standard-version",
         "watch": "rollup -cw",
         "clean": "rimraf dist coverage",
         "clean-dist": "rimraf dist",
@@ -86,6 +87,11 @@
             "text"
         ],
         "all": true
+    },
+    "standard-version": {
+        "skip": {
+            "commit": true
+        }
     },
     "husky": {
         "hooks": {
