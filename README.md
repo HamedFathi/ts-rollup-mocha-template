@@ -13,6 +13,7 @@ It supports:
 - [x] Documentation (`TypeDoc`)
 - [x] Git (`Husky`, `lint-staged`)
 - [x] Minification (`Terser`)
+- [x] Release management (`Standard Version`)
 
 ### Usage
 
