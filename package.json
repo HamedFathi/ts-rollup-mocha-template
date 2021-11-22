@@ -30,6 +30,8 @@
         "coverage": "rimraf coverage && nyc npm run test",
         "typedoc": "npm run clean-docs && typedoc --out docs src/index.ts",
         "release": "standard-version",
+        "release-dry": "standard-version --dry-run",
+        "release-no-commit-tag": "standard-version --skip.commit --skip.tag",
         "watch": "rollup -cw",
         "clean": "rimraf dist coverage",
         "clean-dist": "rimraf dist",
@@ -62,6 +64,7 @@
         "rollup-plugin-typescript2": "^0.31.0",
         "sinon": "^12.0.1",
         "source-map-support": "^0.5.20",
+        "standard-version": "^9.3.2",
         "ts-node": "^10.4.0",
         "tslib": "^2.3.1",
         "typedoc": "^0.22.9",
@@ -87,11 +90,6 @@
             "text"
         ],
         "all": true
-    },
-    "standard-version": {
-        "skip": {
-            "commit": true
-        }
     },
     "husky": {
         "hooks": {
