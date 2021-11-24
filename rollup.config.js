@@ -5,66 +5,74 @@ export default {
     input: "./src/index.ts",
     output: [{
         format: "iife",
-        file: './dist/index.iife.js',
+        file: './dist/bundle.iife.js',
         name: '--module--name--',
+		esModule: false,
+		exports: "named",	
         sourcemap: true
     },
     {
         format: "iife",
-        file: './dist/index.iife.min.js',
+        file: './dist/bundle.iife.min.js',
         name: '--module--name--',
+        sourcemap: true,
+		esModule: false,
+		exports: "named",	
+        plugins: [terser()]
+    },
+	    {
+        file: './dist/bundle.umd.js',
+        format: 'umd',
+        name: '--module--name--',
+		esModule: false,
+		exports: "named",		
+        sourcemap: true
+    },
+    {
+        file: './dist/bundle.umd.min.js',
+        format: 'umd',
+        name: '--module--name--',
+		esModule: false,
+		exports: "named",
         sourcemap: true,
         plugins: [terser()]
     },
     {
-        file: './dist/index.js',
+        file: './dist/bundle.js',
         format: 'cjs',
         exports: 'named',
         sourcemap: true
     },
     {
-        file: './dist/index.min.js',
+        file: './dist/bundle.min.js',
         format: 'cjs',
         exports: 'named',
         sourcemap: true,
         plugins: [terser()]
     },
     {
-        file: './dist/index.es.mjs',
-        format: 'es',
-        exports: 'named',
-        sourcemap: true
-    },
-    {
-        file: './dist/index.es.min.mjs',
-        format: 'es',
-        exports: 'named',
-        sourcemap: true,
-        plugins: [terser()]
-    },
-    {
-        file: './dist/index.amd.js',
+        file: './dist/bundle.amd.js',
         format: 'amd',
         exports: 'named',
         sourcemap: true
     },
     {
-        file: './dist/index.amd.min.js',
+        file: './dist/bundle.amd.min.js',
         format: 'amd',
         exports: 'named',
         sourcemap: true,
         plugins: [terser()]
-    },             
+    },
     {
-        file: './dist/index.umd.js',
-        format: 'umd',
-        name: '--module--name--',
+        file: './dist/bundle.es.mjs',
+        format: 'es',
+        exports: 'named',
         sourcemap: true
     },
     {
-        file: './dist/index.umd.min.js',
-        format: 'umd',
-        name: '--module--name--',
+        file: './dist/bundle.es.min.mjs',
+        format: 'es',
+        exports: 'named',
         sourcemap: true,
         plugins: [terser()]
     }],
