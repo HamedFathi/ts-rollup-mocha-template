@@ -6,7 +6,7 @@ export default {
     output: [{
         format: "iife",
         file: './dist/index.iife.js',
-        name: '--module--name--',
+        name: 'YOUR_MODULE_NAME',
 		esModule: false,
 		exports: "named",	
         sourcemap: true
@@ -14,7 +14,7 @@ export default {
     {
         format: "iife",
         file: './dist/index.iife.min.js',
-        name: '--module--name--',
+        name: 'YOUR_MODULE_NAME',
         sourcemap: true,
 		esModule: false,
 		exports: "named",	
@@ -23,7 +23,7 @@ export default {
 	    {
         file: './dist/index.umd.js',
         format: 'umd',
-        name: '--module--name--',
+        name: 'YOUR_MODULE_NAME',
 		esModule: false,
 		exports: "named",		
         sourcemap: true
@@ -31,7 +31,7 @@ export default {
     {
         file: './dist/index.umd.min.js',
         format: 'umd',
-        name: '--module--name--',
+        name: 'YOUR_MODULE_NAME',
 		esModule: false,
 		exports: "named",
         sourcemap: true,
