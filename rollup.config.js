@@ -63,6 +63,19 @@ export default {
         sourcemap: true,
         plugins: [terser()]
     },
+	    {
+        file: './dist/index.system.js',
+        format: 'system',
+        exports: 'named',
+        sourcemap: true
+    },
+    {
+        file: './dist/index.system.min.js',
+        format: 'system',
+        exports: 'named',
+        sourcemap: true,
+        plugins: [terser()]
+    },
     {
         file: './dist/index.es.mjs',
         format: 'es',
