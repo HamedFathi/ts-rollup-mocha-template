@@ -14,6 +14,7 @@ It supports:
 - [x] Git (`Husky`, `lint-staged`)
 - [x] Minification (`Terser`)
 - [x] Release and version management (`Standard Version`)
+- [ ] Bundle Visualizer (`Rollup Plugin Visualizer`)
 
 ### Usage
 
